@@ -1,0 +1,32 @@
+    7  cd /fs/lustre/scratch/mrahaman
+    8  mkdir CTA200_2025
+    9  cd CTA200_2025
+   10  mkdir assignment_1
+   11  vi README.md
+
+
+   21  find /home/murray/ -name "Hello_world.c"
+   22  cp /home/murray/Papers/tmp/Hello_world.c /fs/lustre/scratch/mrahaman/CTA200_2025/assignment_1/
+
+   24  find /home/murray/ -name "Hello_world.py"
+   25  cp /home/murray/tmp/Hello_world.py /fs/lustre/scratch/mrahaman/CTA200_2025/assignment_1/
+
+
+   31  cd /fs/lustre/scratch/mrahaman/CTA200_2025/assignment_1
+   33  mv Hello_world.c Hello_world_rahaman.c
+   34  mv Hello_world.py Hello_world_rahaman.py
+   
+
+   36  module load gcc
+   37  gcc Hello_world_rahaman.c -o Hello_world.x
+
+   39  ./Hello_world.x
+   40  python3 Hello_world_rahaman.py
+
+   41  vi Hello_world_rahaman.c
+   42  gcc Hello_world_rahaman.c -o Hello_world.x
+   43  vi Hello_world_rahaman.py
+   44  ./Hello_world.x
+   45  python3 Hello_world_rahaman.py
+   46  python3 Hello_world_rahaman.py > output_python.txt
+   48  ./Hello_world.x > output_c.txt
